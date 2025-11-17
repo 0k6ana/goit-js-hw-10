@@ -6,12 +6,12 @@ import "izitoast/dist/css/iziToast.min.css";
 let userSelectedDate = null;
 let timerInterval = null; 
 
-const startBtn = document.querySelector("[data-start]")
-const datetimePicker = document.querySelector("#datetime-picker")
+const startBtn = document.querySelector("[data-start]");
+const datetimePicker = document.querySelector("#datetime-picker");
  startBtn.disabled = true;
 
 function addLeadingZero(value){
-    return String(value).padStart(2,0)
+    return String(value).padStart(2,0);
 }
 
 function updateTimerDisplay(d,h,m,s){
@@ -74,7 +74,7 @@ startBtn.addEventListener('click',()=>{
             startBtn.disabled = false;
             return
         }
-        const {days, hours, minutes,seconds}= convertMs(timeLeft);
-        updateTimerDisplay(days, hours, minutes,seconds);
+        const {days, hours, minutes, seconds}= convertMs(timeLeft);
+        updateTimerDisplay(days, hours, minutes, seconds);
      }, 1000);
 })
